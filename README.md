@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BeyondChats – Full Stack AI Content Pipeline
 
 This repository contains a **complete end-to-end system** built as part of the BeyondChats assignment.
@@ -92,7 +91,7 @@ Detailed documentation:
 
 ----------------------------------------------------------------------------------------------------
 
-### Phase 3 – React Frontend
+### 🔹 Phase 3 – React Frontend
 
 A React-based UI that:
 - Fetches articles from Laravel APIs
@@ -109,7 +108,7 @@ Detailed documentation:
 
 ### Backend (Laravel)
 
-``bash
+```bash
 cd beyondchats-backend
 
 composer install
@@ -121,7 +120,7 @@ http://127.0.0.1:8000
 
 ### AI Processor (NodeJS)
 
-``bash
+```bash
 
 cd node-processor
 npm install
@@ -129,7 +128,7 @@ node index.js
 
 ### Frontend (React)
 
-``bash
+```bash
 
 cd beyondchats-frontend
 npm install
@@ -149,6 +148,3 @@ Frontend runs at: http://localhost:5173
 - LLM output quality depends on prompt tuning
 - Styling prioritizes clarity over heavy UI frameworks
 - These trade-offs were made intentionally within time constraints.
-
-
->>>>>>> 3b00bea5515da5f656c88f10bc04ada2e574ff88
