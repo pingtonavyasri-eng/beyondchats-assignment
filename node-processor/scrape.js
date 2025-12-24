@@ -12,7 +12,6 @@ export async function scrapeArticle(url) {
 
     const $ = cheerio.load(res.data);
 
-    // Prefer article/main, fallback to body
     const content =
       $("article").text() ||
       $("main").text() ||

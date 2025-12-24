@@ -1,5 +1,5 @@
 export async function rewriteArticle(original, competitors, refs) {
-  // Clean original HTML to readable text
+
   const cleanOriginal = original
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")
