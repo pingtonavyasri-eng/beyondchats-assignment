@@ -1,0 +1,220 @@
+/* =========================
+   RESET & THEME VARIABLES
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e5e7eb;
+
+  --accent: #2563eb;
+  --accent-soft: #e0e7ff;
+
+  --badge-ai-bg: #e6f7ee;
+  --badge-ai-text: #1e7f4f;
+
+  --badge-orig-bg: #f1f5f9;
+  --badge-orig-text: #475569;
+}
+
+body.dark {
+  --bg: #020617;
+  --card-bg: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1e293b;
+
+  --accent: #60a5fa;
+  --accent-soft: #1e3a8a;
+
+  --badge-ai-bg: #064e3b;
+  --badge-ai-text: #6ee7b7;
+
+  --badge-orig-bg: #1e293b;
+  --badge-orig-text: #cbd5f5;
+}
+
+/* =========================
+   BASE LAYOUT
+   ========================= */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 36px;
+  letter-spacing: -0.4px;
+}
+
+/* =========================
+   FILTER BAR
+   ========================= */
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--muted);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* =========================
+   ARTICLE CARD
+   ========================= */
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================
+   CARD HEADER
+   ========================= */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* =========================
+   BADGES
+   ========================= */
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-updated {
+  background-color: var(--badge-ai-bg);
+  color: var(--badge-ai-text);
+}
+
+.badge-original {
+  background-color: var(--badge-orig-bg);
+  color: var(--badge-orig-text);
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.content {
+  margin-top: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.content h2,
+.content h3 {
+  margin-top: 22px;
+  color: var(--text);
+}
+
+/* =========================
+   READ MORE BUTTON
+   ========================= */
+
+.toggle-btn {
+  margin-top: 22px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: none;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.toggle-btn:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   DARK MODE TOGGLE (OPTIONAL)
+   ========================= */
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
