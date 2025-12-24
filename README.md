@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BeyondChats – Full Stack AI Content Pipeline
 
 This repository contains a **complete end-to-end system** built as part of the BeyondChats assignment.
@@ -148,3 +149,6 @@ Frontend runs at: http://localhost:5173
 - LLM output quality depends on prompt tuning
 - Styling prioritizes clarity over heavy UI frameworks
 - These trade-offs were made intentionally within time constraints.
+
+
+>>>>>>> 3b00bea5515da5f656c88f10bc04ada2e574ff88
