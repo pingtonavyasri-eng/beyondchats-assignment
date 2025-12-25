@@ -15,6 +15,8 @@ All phases are implemented inside **one monolithic repository** as required.
 
 ## High-Level Architecture
 
+```text
+
 ┌────────────┐
 │ Scraper │ (Laravel Artisan Command)
 └─────┬──────┘
