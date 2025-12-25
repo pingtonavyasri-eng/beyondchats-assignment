@@ -17,13 +17,17 @@ All phases are implemented inside **one monolithic repository** as required.
 
 ```mermaid
 flowchart TD
-    A[Laravel Scraper<br/>(Artisan Command)] --> B[SQLite Database]
-    B --> C[Laravel REST APIs]
-    C --> D[NodeJS AI Processor<br/>Search → Scrape → Rewrite]
-    D --> C
-    C --> E[React Frontend]
+    A[Laravel Scraper (Artisan Command)]
+    B[SQLite Database]
+    C[Laravel REST APIs]
+    D[NodeJS AI Processor]
+    E[React Frontend]
 
-└────────────┘
+    A --> B
+    B --> C
+    C --> D
+    D --> C
+    C --> E
 
 ----------------------------------------------------------------------------------------------------
 
