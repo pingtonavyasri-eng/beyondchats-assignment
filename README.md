@@ -15,19 +15,25 @@ All phases are implemented inside **one monolithic repository** as required.
 
 ## High-Level Architecture
 
-```mermaid
 flowchart TD
-    A[Laravel Scraper (Artisan Command)]
-    B[SQLite Database]
-    C[Laravel REST APIs]
-    D[NodeJS AI Processor]
-    E[React Frontend]
+    A["Laravel Scraper - Artisan Command"]
+    B["SQLite Database"]
+    C["Laravel REST APIs"]
+    D["NodeJS AI Processor"]
+    E["React Frontend"]
 
     A --> B
     B --> C
     C --> D
     D --> C
     C --> E
+
+----------------------------------------------------------------------------------------------------
+
+## Architecture Notes
+- SQLite used for simplicity; replaceable with PostgreSQL/MySQL
+- AI processor runs as a separate Node.js service for async processing
+- APIs communicate via status-based workflow to prevent infinite loops
 
 ----------------------------------------------------------------------------------------------------
 
