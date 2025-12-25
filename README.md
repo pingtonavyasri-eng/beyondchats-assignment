@@ -15,29 +15,14 @@ All phases are implemented inside **one monolithic repository** as required.
 
 ## High-Level Architecture
 
-┌────────────┐
-│ Scraper │ (Laravel Artisan Command)
-└─────┬──────┘
-│
-▼
-┌────────────┐
-│ Database │ (SQLite)
-└─────┬──────┘
-│
-▼
-┌────────────┐
-│ REST APIs │ (Laravel CRUD APIs)
-└─────┬──────┘
-│
-▼
-┌────────────┐
-│ NodeJS AI │ (Search → Scrape → Rewrite)
-│ Processor │
-└─────┬──────┘
-│
-▼
-┌────────────┐
-│ React UI │ (Article Viewer)
+```mermaid
+flowchart TD
+    A[Laravel Scraper<br/>(Artisan Command)] --> B[SQLite Database]
+    B --> C[Laravel REST APIs]
+    C --> D[NodeJS AI Processor<br/>Search → Scrape → Rewrite]
+    D --> C
+    C --> E[React Frontend]
+
 └────────────┘
 
 ----------------------------------------------------------------------------------------------------
