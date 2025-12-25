@@ -39,6 +39,7 @@ flowchart TD
 
 ## Repository Structure
 
+```text
 .
 ├── beyondchats-backend/     # Phase 1: Laravel backend
 │   └── README.md
