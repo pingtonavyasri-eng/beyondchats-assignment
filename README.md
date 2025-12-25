@@ -38,18 +38,22 @@ flowchart TD
 ----------------------------------------------------------------------------------------------------
 
 ## Repository Structure
-
 .
-├── beyondchats-backend/ # Phase 1 – Laravel backend
-│ └── README.md
-│
-├── node-processor/ # Phase 2 – NodeJS AI pipeline
-│ └── README.md
-│
-├── beyondchats-frontend/ # Phase 3 – React frontend
-│ └── README.md
-│
-└── README.md
+├── beyondchats-backend/     # Laravel backend (Scraping + REST APIs)
+├── node-processor/          # Node.js AI processing service
+├── beyondchats-frontend/    # React frontend
+└── README.md                # Project overview and setup
+
+----------------------------------------------------------------------------------------------------
+
+## Application Flow
+
+1. Laravel scraper (Artisan command) collects chat data.
+2. Data is stored in SQLite.
+3. Laravel REST APIs expose the data.
+4. Node.js service processes data using AI.
+5. Processed results are sent back to the backend.
+6. React frontend fetches and displays the final output.
 
 ----------------------------------------------------------------------------------------------------
 
