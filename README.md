@@ -46,8 +46,6 @@ All phases are implemented inside **one monolithic repository** as required.
 
 ## Repository Structure
 
-```text
-
 .
 ├── beyondchats-backend/ # Phase 1 – Laravel backend
 │ └── README.md
